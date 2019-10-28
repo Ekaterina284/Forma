@@ -1,0 +1,15 @@
+.title {
+  margin-top: 190px;
+  text-align: center;
+  color: rgb(216, 9, 95);
+}
+.form__login__btn {
+  background: #ffdab9;
+}
+.form__login {
+  margin-top: 50px;
+  text-align: center;
+}
+.form__login__input {
+  margin-bottom: 20px;
+}
