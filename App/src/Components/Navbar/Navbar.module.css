@@ -1,0 +1,16 @@
+.menu {
+  margin-top: 15px;
+}
+
+.menu__item {
+  padding-left: 60px;
+  display: inline;
+}
+
+.menu__item a {
+  font-size: 22px;
+  font-weight: 400;
+  color: rgb(102, 18, 3);
+  float: right;
+  padding-left: 60px;
+}

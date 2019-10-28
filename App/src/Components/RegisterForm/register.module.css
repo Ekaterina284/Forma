@@ -1,0 +1,16 @@
+.title {
+  margin-top: 190px;
+  text-align: center;
+  color: #2c8b06;
+}
+.form__register__btn {
+  background: #9bd385;
+  margin-top: 20px;
+}
+.form__register {
+  margin-top: 50px;
+  text-align: center;
+}
+.d.form__register__input {
+  margin-bottom: 20px;
+}
