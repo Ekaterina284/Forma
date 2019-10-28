@@ -9,7 +9,9 @@ const resources = {
       logout: 'LOGOUT',
       nameprogram: 'CATALOG MOVIES',
       username: 'Name',
-      pass: 'Password'
+      pass: 'Password',
+      cinema: 'Cinema',
+      category: 'Category'
     }
   }
 };
