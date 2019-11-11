@@ -26,7 +26,7 @@ const Login = () => {
           placeholder={t('pass')}
         />
         <br />
-        <input type="submit" className={s.form__login__btn} value={t('log')} />
+        <input type="submit" className={s.form__login__btn} value={t('sign')} />
       </form>
     </div>
   );
