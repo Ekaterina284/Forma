@@ -1,12 +1,11 @@
 import React from 'react';
-//import { useTranslation } from 'react-i18next';
+
 import style from '../Buttons/button.module.css';
-import menu from '../menu.png';
-import add from '../99053.png';
+import menu from '../../../image/menu.png';
+import add from '../../../image/99053.png';
 import { NavLink } from 'react-router-dom';
 
 const Add = () => {
-  //const { t } = useTranslation();
   return (
     <div>
       <div className={style.btn__menu}>

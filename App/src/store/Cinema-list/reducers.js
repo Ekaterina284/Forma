@@ -1,5 +1,5 @@
-let initialState = {
-  Movies: [
+export default function() {
+  return [
     {
       photo:
         'http://school22-tmn.ru/uploads/posts/2016-02/1455513967_file39101521_82da39f0.jpg',
@@ -30,7 +30,7 @@ let initialState = {
     {
       photo:
         'http://school22-tmn.ru/uploads/posts/2016-02/1455513967_file39101521_82da39f0.jpg',
-      id: 2,
+      id: 4,
       name: 'Cimena:',
       year: 'Year:',
       author: 'Author:',
@@ -39,7 +39,7 @@ let initialState = {
     {
       photo:
         'http://school22-tmn.ru/uploads/posts/2016-02/1455513967_file39101521_82da39f0.jpg',
-      id: 3,
+      id: 5,
       name: 'Name:',
       year: 'Year:',
       author: 'Author:',
@@ -49,15 +49,10 @@ let initialState = {
     {
       photo:
         'http://school22-tmn.ru/uploads/posts/2016-02/1455513967_file39101521_82da39f0.jpg',
-      id: 3,
+      id: 6,
       name: 'Name:',
       year: 'Year:',
       author: 'Author:'
     }
-  ]
-};
-
-const movieReducer = (state = initialState, action) => {
-  return state;
-};
-export default movieReducer;
+  ];
+}

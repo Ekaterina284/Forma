@@ -1,26 +1,21 @@
 import './i18n';
+import { BrowserRouter } from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
-import store from './Redux/redux-store';
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './i18n';
 import App from './App';
+import store from './redusers/redux_store';
+import { Provider } from 'react-redux';
 
-let rerenderEntireTree = state => {
-  ReactDOM.render(
-    <App state={store.getState()} dispatch={store.dispatch.bind(store)} />,
-    document.getElementById('root')
-  );
-};
+ReactDOM.render(
+  <BrowserRouter>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </BrowserRouter>,
 
-//   ReactDOM.render(
-//     <App state={state} addCategory={addCategory} />,
-//     document.getElementById('root')
-store.subscribe(() => {
-  let state = store.getState();
-  rerenderEntireTree(state);
-});
+  document.getElementById('root')
+);
 
-rerenderEntireTree(store.getState);
 registerServiceWorker();

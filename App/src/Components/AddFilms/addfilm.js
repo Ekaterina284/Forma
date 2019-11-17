@@ -1,9 +1,14 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import style from '../AddFilms/addfilm.module.css';
+import { useSelector } from 'react-redux';
 
 const Film = () => {
   const { t } = useTranslation();
+  const categor = useSelector(state => state.category.CategoryData);
+  const categ = categor.map(cinema => {
+    return <option key={cinema.id}>{cinema.category}</option>;
+  });
 
   return (
     <div>
@@ -24,7 +29,7 @@ const Film = () => {
         <label className={style.opisanie__option}>Category:</label>
         <select className={style.category}>
           <option>Сhoose a category</option>
-          <option> </option>
+          {categ}
         </select>
         <br />
         <br />

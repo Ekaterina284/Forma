@@ -2,9 +2,10 @@
   margin-left: 35px;
   margin-top: 25px;
 }
-.menu {
+.column__1 {
+  width: 20%;
   background-color: rgb(134, 23, 47);
-  height: 650px;
+  float: left;
 }
 
 .menu__item__new a {
