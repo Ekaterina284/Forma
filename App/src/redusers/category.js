@@ -1,5 +1,4 @@
 const ADD_POST = 'ADD_POST';
-
 let initialState = {
   CategoryData: [
     {
@@ -29,14 +28,12 @@ const categoryReducer = (state = initialState, action) => {
         id: state.CategoryData.lenght,
         category: action.newName
       };
+
       let stateCopy = { ...state };
       stateCopy.CategoryData = [...state.CategoryData];
       stateCopy.CategoryData.push(newPost);
       stateCopy.newPostText = '';
       return stateCopy;
-    case SELECT_CATEGORY:
-      return action.newCategory;
-
     default:
       return state;
   }

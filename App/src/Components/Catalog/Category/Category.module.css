@@ -17,3 +17,10 @@
   margin-left: 210px;
   margin-top: -110px;
 }
+.link {
+  color: #0f0f0f;
+}
+
+a:hover {
+  color: #a4e4ec;
+}

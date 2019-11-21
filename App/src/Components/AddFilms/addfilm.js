@@ -1,34 +1,92 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import style from '../AddFilms/addfilm.module.css';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { addFilmActionCreator } from './action';
+import { NavLink } from 'react-router-dom';
 
 const Film = () => {
+  const dispatch = useDispatch();
   const { t } = useTranslation();
+  const [filmActionCreator, setfilmActionCreator] = useState({
+    photo: '',
+    name: '',
+    year: '',
+    author: ''
+  });
+
   const categor = useSelector(state => state.category.CategoryData);
   const categ = categor.map(cinema => {
     return <option key={cinema.id}>{cinema.category}</option>;
   });
+  const onAddFilmClick = () => {
+    dispatch(addFilmActionCreator(filmActionCreator));
+  };
+  const onFilmChange = event =>
+    setfilmActionCreator({
+      ...filmActionCreator,
+      [event.target.name]: event.target.value
+    });
 
   return (
     <div>
-      <form className={style.form__film} method="post">
-        <p>
-          <label className={style.opisanie__input} for="scales">
+      <form action="/catalog" className={style.form__film} method="get">
+        <div>
+          <label className={style.opisanie__input__1} for="scales">
             Cinema Name:
           </label>
           <input
             className={style.form__input}
             required
             type="text"
-            name="firstname"
+            name="name"
             placeholder={t('cinemaname')}
+            onChange={onFilmChange}
           />
-        </p>
+        </div>
+        <div>
+          <label className={style.opisanie__input__2} for="scales">
+            Year:
+          </label>
+          <input
+            className={style.form__input}
+            required
+            type="date"
+            name="year"
+            placeholder={t('year')}
+            onChange={onFilmChange}
+          />
+        </div>
+        <div>
+          <label className={style.opisanie__input__3} for="scales">
+            Author:
+          </label>
+          <input
+            className={style.form__input}
+            required
+            type="text"
+            name="author"
+            placeholder={t('author')}
+            onChange={onFilmChange}
+          />
+        </div>
+        <div>
+          <label className={style.opisanie__input__1} for="scales">
+            Photo:
+          </label>
+          <input
+            className={style.form__input}
+            required
+            type="file"
+            name="photo"
+            //accept="image/x-png,image/gif,image/jpeg"
+            placeholder={t('cinemaname')}
+            onChange={onFilmChange}
+          />
+        </div>
 
         <label className={style.opisanie__option}>Category:</label>
-        <select className={style.category}>
-          <option>Сhoose a category</option>
+        <select className={style.category} onChange={onFilmChange}>
           {categ}
         </select>
         <br />
@@ -36,7 +94,15 @@ const Film = () => {
         <input type="checkbox" className={style.checkbox} />
         <label>Load cinema info from Api</label>
         <br />
-        <input type="submit" className={style.form__btn} value={t('Create')} />
+
+        <NavLink to="/catalog">
+          <input
+            type="submit"
+            className={style.form__btn}
+            onClick={onAddFilmClick}
+            value={t('Add')}
+          />
+        </NavLink>
       </form>
     </div>
   );

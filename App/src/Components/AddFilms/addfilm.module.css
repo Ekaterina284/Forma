@@ -20,8 +20,14 @@
   width: 250px;
   text-align: center;
 }
-.opisanie__input {
-  padding-right: 20px;
+.opisanie__input__1 {
+  padding-right: 50px;
+}
+.opisanie__input__2 {
+  padding-right: 110px;
+}
+.opisanie__input__3 {
+  padding-right: 100px;
 }
 .opisanie__option {
   padding-right: 85px;

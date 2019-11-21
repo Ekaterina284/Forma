@@ -1,16 +1,13 @@
 import React from 'react';
-//import { bindActionCreators } from 'redux';
-
-import q from '../Catalog/movie.module.css';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
+import q from '../Cinema/movie.module.css';
 
 function CinemaList() {
-  //const dispatch = useDispatch();
-  const film = useSelector(state => state.films);
+  const film = useSelector(state => state.movie.MovieData);
   const movies = film.map(cinema => {
     return (
       <div key={cinema.id} className={q.movie__op}>
-        <img className={q.movie__photo} src={cinema.photo} />
+        <img className={q.movie__photo} src={cinema.photo} alt={cinema.photo} />
 
         <div>{cinema.name}</div>
         <div>{cinema.year}</div>
@@ -18,8 +15,6 @@ function CinemaList() {
       </div>
     );
   });
-
   return <div className={q}>{movies}</div>;
 }
-
 export default CinemaList;

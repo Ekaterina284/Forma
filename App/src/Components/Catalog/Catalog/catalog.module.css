@@ -6,16 +6,11 @@
 
 .column__2 {
   width: 73%;
-
   float: left;
 }
 
 .column__3 {
   width: 7%;
   min-height: 2%;
-  float: left;
-}
-.column__4 {
-  width: 40%;
   float: left;
 }

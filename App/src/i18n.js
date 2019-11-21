@@ -14,7 +14,10 @@ const resources = {
       category: 'Category',
       sign: 'Sign in',
       cinemaname: 'Cinema name',
-      create: 'Create'
+      create: 'Create',
+      author: 'Author',
+      year: 'Year',
+      Add: 'Аdd movie'
     }
   }
 };

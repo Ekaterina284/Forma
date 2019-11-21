@@ -1,7 +1,7 @@
 import React from 'react';
 import CinemaList from '../Cinema/cinema-list';
 import CategoryList from '../../Catalog/Category/category-list';
-import q from '../catalog.module.css';
+import q from '../Catalog/catalog.module.css';
 import Add from '../Buttons/button';
 
 const WebPage = () => (
