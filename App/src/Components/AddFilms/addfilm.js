@@ -12,7 +12,8 @@ const Film = () => {
     photo: '',
     name: '',
     year: '',
-    author: ''
+    author: '',
+    Category: ''
   });
 
   const categor = useSelector(state => state.category.CategoryData);
@@ -79,14 +80,17 @@ const Film = () => {
             required
             type="file"
             name="photo"
-            //accept="image/x-png,image/gif,image/jpeg"
             placeholder={t('cinemaname')}
             onChange={onFilmChange}
           />
         </div>
 
         <label className={style.opisanie__option}>Category:</label>
-        <select className={style.category} onChange={onFilmChange}>
+        <select
+          className={style.category}
+          name="Category"
+          onChange={onFilmChange}
+        >
           {categ}
         </select>
         <br />

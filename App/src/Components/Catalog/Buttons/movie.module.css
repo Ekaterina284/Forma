@@ -1,0 +1,13 @@
+.movie__photo {
+  width: 60%;
+  margin: 20px 90px 0 0;
+}
+
+.movie__opisanie {
+  margin-left: 25px;
+}
+.movie__op {
+  display: inline-block;
+  border: 5px solid #000;
+  width: 30px;
+}

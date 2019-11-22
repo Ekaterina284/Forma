@@ -2,19 +2,18 @@ const ADD_CINEMA = 'ADD_CINEMA';
 // const ORIENTATION_GRID = ' ORIENTATION_GRID';
 // const ORIENTATION_LIST = ' ORIENTATION_LIST';
 const SELECT_CATEGORY = 'SELECT_CATEGORY';
-
 let initialState = {
+  viewCategory: '',
+  // opientation: '',
   MovieData: [
-    // opientation: 'LIST',
-
     {
       photo:
         'http://school22-tmn.ru/uploads/posts/2016-02/1455513967_file39101521_82da39f0.jpg',
       id: 1,
-      name: 'Avatar',
-      year: 'Year:',
-      author: 'Author:',
-      Category: 'Category1'
+      name: 'Аватар',
+      year: '17.12.2009',
+      author: 'Джеймс Кэмерон',
+      Category: 'Фэнтези'
     },
     {
       photo:
@@ -23,7 +22,7 @@ let initialState = {
       name: 'Cimena:',
       year: 'Year:',
       author: 'Author:',
-      Category: 'Category1'
+      Category: 'Мультфильм'
     },
     {
       photo:
@@ -32,7 +31,7 @@ let initialState = {
       name: 'Name:',
       year: 'Year:',
       author: 'Author:',
-      Category: 'Category3'
+      Category: 'Комедия'
     },
     {
       photo:
@@ -41,7 +40,7 @@ let initialState = {
       name: 'Cimena:',
       year: 'Year:',
       author: 'Author:',
-      Category: 'Category4'
+      Category: 'Комедия'
     },
     {
       photo:
@@ -50,7 +49,7 @@ let initialState = {
       name: 'Name:',
       year: 'Year:',
       author: 'Author:',
-      Category: 'Category6'
+      Category: 'Фэнтези'
     },
 
     {
@@ -60,7 +59,7 @@ let initialState = {
       name: 'Name:',
       year: 'Year:',
       author: 'Author:',
-      Category: 'Category6'
+      Category: 'Фэнтези'
     }
   ],
   newCinemaText: ''
@@ -74,7 +73,8 @@ const CinemaReducer = (state = initialState, action) => {
         photo: action.newPhoto,
         name: action.newName,
         year: action.newYear,
-        author: action.newAuthor
+        author: action.newAuthor,
+        Category: action.NewCategory
       };
       const stateCopy = { ...state };
       stateCopy.MovieData = [...state.MovieData];
@@ -83,7 +83,9 @@ const CinemaReducer = (state = initialState, action) => {
 
       return stateCopy;
     case SELECT_CATEGORY:
-      return action.newCategory;
+      return { ...state, viewCategory: action.newName };
+    // case SELECT_CATEGORY:
+    //   return action.newCategory;
 
     // case ORIENTATION_LIST:
     //   break;

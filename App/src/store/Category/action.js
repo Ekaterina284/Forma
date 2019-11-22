@@ -2,9 +2,9 @@ export const addCategoryActionCreator = text => ({
   type: 'ADD_POST',
   newName: text
 });
-export const SelectCategoryActionCreator = category => ({
+export const selectCategoryActionCreator = text => ({
   type: 'SELECT_CATEGORY',
-  newCategory: category
+  newName: text
 });
 
 // export const selectCinemaActionCreator = cinema => {

@@ -3,19 +3,15 @@ let initialState = {
   CategoryData: [
     {
       id: 1,
-      category: 'Category'
+      category: 'Фэнтези'
     },
     {
       id: 2,
-      category: 'Category1'
+      category: ' Мультфильм'
     },
     {
       id: 3,
-      category: 'Category2'
-    },
-    {
-      id: 4,
-      category: 'Category3'
+      category: 'Комедия'
     }
   ],
   newPostText: ''

@@ -8,7 +8,7 @@ let initialState = {
     },
     {
       id: 2,
-      category: 'Category1'
+      category: 'Фэнтези'
     },
     {
       id: 3,
