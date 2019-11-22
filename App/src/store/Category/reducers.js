@@ -1,22 +1,17 @@
 const ADD_POST = 'ADD_POST';
-
 let initialState = {
   CategoryData: [
     {
       id: 1,
-      category: 'Category'
-    },
-    {
-      id: 2,
       category: 'Фэнтези'
     },
     {
-      id: 3,
-      category: 'Category2'
+      id: 2,
+      category: ' Мультфильм'
     },
     {
-      id: 4,
-      category: 'Category3'
+      id: 3,
+      category: 'Комедия'
     }
   ],
   newPostText: ''
@@ -29,14 +24,12 @@ const categoryReducer = (state = initialState, action) => {
         id: state.CategoryData.lenght,
         category: action.newName
       };
+
       let stateCopy = { ...state };
       stateCopy.CategoryData = [...state.CategoryData];
       stateCopy.CategoryData.push(newPost);
       stateCopy.newPostText = '';
       return stateCopy;
-    case SELECT_CATEGORY:
-      return action.newCategory;
-
     default:
       return state;
   }

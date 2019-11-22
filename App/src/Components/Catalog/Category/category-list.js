@@ -11,7 +11,6 @@ function CategoryList() {
   const dispatch = useDispatch();
   const categor = useSelector(state => state.category.CategoryData);
   const [categoryActionCreator, setcategoryActionCreator] = useState('');
-  // const cat = useSelector(state => state.category.viewCategory);
   const onClickSelect = event => {
     dispatch(selectCategoryActionCreator(event.currentTarget.value));
   };
@@ -38,15 +37,6 @@ function CategoryList() {
       setcategoryActionCreator('');
     }
   };
-  // const selectcategor = useSelector(state => state.movie.MovieData);
-
-  // const selectcateg = selectcategor.map(category => {
-  //   return (
-  //     <div key={category.id}>
-  //       <button>{category.Category}</button>
-  //     </div>
-  //   );
-  // });
 
   return (
     <div className={style.column}>

@@ -1,10 +1,12 @@
 const ADD_CINEMA = 'ADD_CINEMA';
-// const ORIENTATION_GRID = ' ORIENTATION_GRID';
-// const ORIENTATION_LIST = ' ORIENTATION_LIST';
 const SELECT_CATEGORY = 'SELECT_CATEGORY';
+const LIST_ORIENTATION = 'LIST_ORIENTATION';
+const GRID_ORIENTATION = 'GRID_ORIENTATION';
 let initialState = {
+  newCinemaText: '',
   viewCategory: '',
-  // opientation: '',
+  orientation: 'LIST',
+  orientation: 'GRID',
   MovieData: [
     {
       photo:
@@ -61,8 +63,7 @@ let initialState = {
       author: 'Author:',
       Category: 'Фэнтези'
     }
-  ],
-  newCinemaText: ''
+  ]
 };
 
 const CinemaReducer = (state = initialState, action) => {
@@ -84,13 +85,10 @@ const CinemaReducer = (state = initialState, action) => {
       return stateCopy;
     case SELECT_CATEGORY:
       return { ...state, viewCategory: action.newName };
-    // case SELECT_CATEGORY:
-    //   return action.newCategory;
-
-    // case ORIENTATION_LIST:
-    //   break;
-    // case ORIENTATION_GRID:
-    //   break;
+    case LIST_ORIENTATION:
+      return { ...state, orientation: 'LIST' };
+    case GRID_ORIENTATION:
+      return { ...state, orientation: 'GRID' };
 
     default:
       return state;

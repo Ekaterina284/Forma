@@ -1,4 +1,6 @@
-// export const orientationAlbumActionCreator = text => ({
-//   type: 'SELECT_CATEGORY',
-//   newName: text
-// });
+export const orientationListActionCreator = () => ({
+  type: 'LIST_ORIENTATION'
+});
+export const orientationGridActionCreator = () => ({
+  type: 'GRID_ORIENTATION'
+});
