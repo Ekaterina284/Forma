@@ -2,12 +2,12 @@ const ADD_CINEMA = 'ADD_CINEMA';
 const SELECT_CATEGORY = 'SELECT_CATEGORY';
 const LIST_ORIENTATION = 'LIST_ORIENTATION';
 const GRID_ORIENTATION = 'GRID_ORIENTATION';
-let initialState = {
+const initialState = {
   newCinemaText: '',
   viewCategory: '',
   orientation: 'LIST',
   orientation: 'GRID',
-  MovieData: [
+  movieData: [
     {
       photo:
         'http://school22-tmn.ru/uploads/posts/2016-02/1455513967_file39101521_82da39f0.jpg',
@@ -15,7 +15,7 @@ let initialState = {
       name: 'Аватар',
       year: '17.12.2009',
       author: 'Джеймс Кэмерон',
-      Category: 'Фэнтези'
+      category: 'Фэнтези'
     },
     {
       photo:
@@ -24,7 +24,7 @@ let initialState = {
       name: 'Cimena:',
       year: 'Year:',
       author: 'Author:',
-      Category: 'Мультфильм'
+      category: 'Мультфильм'
     },
     {
       photo:
@@ -33,7 +33,7 @@ let initialState = {
       name: 'Name:',
       year: 'Year:',
       author: 'Author:',
-      Category: 'Комедия'
+      category: 'Комедия'
     },
     {
       photo:
@@ -42,7 +42,7 @@ let initialState = {
       name: 'Cimena:',
       year: 'Year:',
       author: 'Author:',
-      Category: 'Комедия'
+      category: 'Комедия'
     },
     {
       photo:
@@ -51,7 +51,7 @@ let initialState = {
       name: 'Name:',
       year: 'Year:',
       author: 'Author:',
-      Category: 'Фэнтези'
+      category: 'Фэнтези'
     },
 
     {
@@ -61,7 +61,7 @@ let initialState = {
       name: 'Name:',
       year: 'Year:',
       author: 'Author:',
-      Category: 'Фэнтези'
+      category: 'Фэнтези'
     }
   ]
 };
@@ -69,20 +69,21 @@ let initialState = {
 const CinemaReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_CINEMA:
-      const newCinema = {
-        id: state.MovieData.length,
-        photo: action.newPhoto,
-        name: action.newName,
-        year: action.newYear,
-        author: action.newAuthor,
-        Category: action.NewCategory
+      return {
+        ...state,
+        movieData: [
+          ...state.movieData,
+          {
+            id: state.movieData.length,
+            photo: action.newPhoto,
+            name: action.newName,
+            year: action.newYear,
+            author: action.newAuthor,
+            category: action.newCategory
+          }
+        ],
+        newCinemaText: ''
       };
-      const stateCopy = { ...state };
-      stateCopy.MovieData = [...state.MovieData];
-      stateCopy.MovieData.push(newCinema);
-      stateCopy.newCinemaText = '';
-
-      return stateCopy;
     case SELECT_CATEGORY:
       return { ...state, viewCategory: action.newName };
     case LIST_ORIENTATION:

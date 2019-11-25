@@ -1,10 +1,10 @@
 import React from 'react';
-import CinemaList from '../Cinema/cinema-list';
-import CategoryList from '../../Catalog/Category/category-list';
+import CinemaList from '../CinemaList/CinemaList';
 import q from '../Catalog/catalog.module.css';
-import Add from '../Buttons/button';
+import Button from '../Buttons/button';
+import CategoryList from '../CategoryList/CategoryList';
 
-const WebPage = () => (
+const Catalog = () => (
   <div>
     <div className={q.column__1}>
       <CategoryList />
@@ -13,9 +13,9 @@ const WebPage = () => (
       <CinemaList />
     </div>
     <div className={q.column__3}>
-      <Add />
+      <Button />
     </div>
   </div>
 );
 
-export default WebPage;
+export default Catalog;

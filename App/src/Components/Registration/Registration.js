@@ -1,16 +1,15 @@
 import React from 'react';
+import d from './Registration.module.css';
 import { useTranslation } from 'react-i18next';
-import s from './Auth.module.css';
-
-const Login = () => {
+const Registration = () => {
   const { t } = useTranslation();
   return (
     <div>
-      <p className={s.title}>{t('nameprogram')}</p>
-      <form className={s.form__login} method="post">
+      <p className={d.title}> {t('register')}</p>
+      <form className={d.form__register} method="post">
         <p>
           <input
-            className={s.form__login__input}
+            className={d.form__register__input}
             required
             type="text"
             name="firstname"
@@ -19,17 +18,21 @@ const Login = () => {
         </p>
 
         <input
-          className={s.form__login__input}
+          className={d.form__register__input}
           required
           type="password"
           name="user"
           placeholder={t('pass')}
         />
         <br />
-        <input type="submit" className={s.form__login__btn} value={t('sign')} />
+        <input
+          type="submit"
+          className={d.form__register__btn}
+          value={t('register')}
+        />
       </form>
     </div>
   );
 };
 
-export default Login;
+export default Registration;

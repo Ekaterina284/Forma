@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import style from '../Category/Category.module.css';
+import style from './CategoryList.module.css';
 import add from '../../../image/99053.png';
 import {
   addCategoryActionCreator,
@@ -9,7 +9,7 @@ import {
 
 function CategoryList() {
   const dispatch = useDispatch();
-  const categor = useSelector(state => state.category.CategoryData);
+  const categor = useSelector(state => state.category.categoryData);
   const [categoryActionCreator, setcategoryActionCreator] = useState('');
   const onClickSelect = event => {
     dispatch(selectCategoryActionCreator(event.currentTarget.value));

@@ -10,12 +10,12 @@ import list from '../../../image/menu.png';
 import add from '../../../image/99053.png';
 import grid from '../../../image/menu2.png';
 
-function Add() {
+function Button() {
   const dispatch = useDispatch();
-  const onClickListOrientation = event => {
+  const handleListOrientationClick = event => {
     dispatch(orientationListActionCreator());
   };
-  const onClickGridOrientation = event => {
+  const handleGridOrientationClick = event => {
     dispatch(orientationGridActionCreator());
   };
 
@@ -27,7 +27,7 @@ function Add() {
           type="image"
           src={list}
           alt={list}
-          onClick={onClickGridOrientation}
+          onClick={handleGridOrientationClick}
         />
       </div>
       <div className={style.btn__menu}>
@@ -36,7 +36,7 @@ function Add() {
           type="image"
           src={grid}
           alt={grid}
-          onClick={onClickListOrientation}
+          onClick={handleListOrientationClick}
         />
       </div>
 
@@ -51,4 +51,4 @@ function Add() {
     </div>
   );
 }
-export default Add;
+export default Button;

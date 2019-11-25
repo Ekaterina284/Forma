@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import style from '../AddFilms/addfilm.module.css';
+import style from './AddFilm.module.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { addFilmActionCreator } from './action';
 import { NavLink } from 'react-router-dom';
 
-const Film = () => {
+const AddFilm = () => {
   const dispatch = useDispatch();
   const { t } = useTranslation();
   const [filmActionCreator, setfilmActionCreator] = useState({
@@ -13,10 +13,10 @@ const Film = () => {
     name: '',
     year: '',
     author: '',
-    Category: ''
+    category: ''
   });
 
-  const categor = useSelector(state => state.category.CategoryData);
+  const categor = useSelector(state => state.category.categoryData);
   const categ = categor.map(cinema => {
     return <option key={cinema.id}>{cinema.category}</option>;
   });
@@ -33,7 +33,7 @@ const Film = () => {
     <div>
       <form action="/catalog" className={style.form__film} method="get">
         <div>
-          <label className={style.opisanie__input__1} for="scales">
+          <label className={style.form__label__1} for="scales">
             Cinema Name:
           </label>
           <input
@@ -46,7 +46,7 @@ const Film = () => {
           />
         </div>
         <div>
-          <label className={style.opisanie__input__2} for="scales">
+          <label className={style.form__label__2} for="scales">
             Year:
           </label>
           <input
@@ -59,7 +59,7 @@ const Film = () => {
           />
         </div>
         <div>
-          <label className={style.opisanie__input__3} for="scales">
+          <label className={style.form__label__3} for="scales">
             Author:
           </label>
           <input
@@ -72,7 +72,7 @@ const Film = () => {
           />
         </div>
         <div>
-          <label className={style.opisanie__input__1} for="scales">
+          <label className={style.form__label__1} for="scales">
             Photo:
           </label>
           <input
@@ -85,10 +85,10 @@ const Film = () => {
           />
         </div>
 
-        <label className={style.opisanie__option}>Category:</label>
+        <label className={style.form__select}>Category:</label>
         <select
           className={style.category}
-          name="Category"
+          name="category"
           onChange={onFilmChange}
         >
           {categ}
@@ -112,4 +112,4 @@ const Film = () => {
   );
 };
 
-export default Film;
+export default AddFilm;

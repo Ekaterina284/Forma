@@ -20,16 +20,16 @@
   width: 250px;
   text-align: center;
 }
-.opisanie__input__1 {
+.form__label__1 {
   padding-right: 50px;
 }
-.opisanie__input__2 {
+.form__label__2 {
   padding-right: 110px;
 }
-.opisanie__input__3 {
+.form__label__3 {
   padding-right: 100px;
 }
-.opisanie__option {
+.form__select {
   padding-right: 85px;
 }
 .category {

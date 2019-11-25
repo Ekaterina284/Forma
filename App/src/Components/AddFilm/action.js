@@ -3,12 +3,12 @@ export const addFilmActionCreator = ({
   name,
   year,
   author,
-  Category
+  category
 }) => ({
   type: 'ADD_CINEMA',
   newPhoto: photo,
   newName: name,
   newYear: year,
   newAuthor: author,
-  NewCategory: Category
+  newCategory: category
 });
