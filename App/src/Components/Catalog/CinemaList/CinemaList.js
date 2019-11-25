@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import q from './CinemaList.module.css';
-import s from '../Buttons/movieListorient.module.css';
+import cinemaListStyle from './CinemaList.module.css';
+import movieListStyle from '../Buttons/movieListorient.module.css';
 
 function CinemaList() {
   const film = useSelector(state => state.movie.movieData);
@@ -11,9 +11,9 @@ function CinemaList() {
     if (orient === 'LIST') {
       if (categ === cinema.category || categ === '') {
         return (
-          <div key={cinema.id} className={q.movie__op}>
+          <div key={cinema.id} className={cinemaListStyle.movie__op}>
             <img
-              className={q.movie__photo}
+              className={cinemaListStyle.movie__photo}
               src={cinema.photo}
               alt={cinema.photo}
             />
@@ -28,9 +28,9 @@ function CinemaList() {
     } else {
       if (categ === cinema.category || categ === '') {
         return (
-          <div key={cinema.id} className={s.movie__op}>
+          <div key={cinema.id} className={movieListStyle.movie__op}>
             <img
-              className={s.movie__photo}
+              className={movieListStyle.movie__photo}
               src={cinema.photo}
               alt={cinema.photo}
             />

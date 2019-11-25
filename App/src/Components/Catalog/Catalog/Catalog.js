@@ -1,18 +1,18 @@
 import React from 'react';
 import CinemaList from '../CinemaList/CinemaList';
-import q from '../Catalog/catalog.module.css';
+import catalog from '../Catalog/catalog.module.css';
 import Button from '../Buttons/button';
 import CategoryList from '../CategoryList/CategoryList';
 
 const Catalog = () => (
   <div>
-    <div className={q.column__1}>
+    <div className={catalog.column__1}>
       <CategoryList />
     </div>
-    <div className={q.column__2}>
+    <div className={catalog.column__2}>
       <CinemaList />
     </div>
-    <div className={q.column__3}>
+    <div className={catalog.column__3}>
       <Button />
     </div>
   </div>

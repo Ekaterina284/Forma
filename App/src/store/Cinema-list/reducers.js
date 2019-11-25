@@ -75,17 +75,17 @@ const CinemaReducer = (state = initialState, action) => {
           ...state.movieData,
           {
             id: state.movieData.length,
-            photo: action.newPhoto,
-            name: action.newName,
-            year: action.newYear,
-            author: action.newAuthor,
-            category: action.newCategory
+            photo: action.payload.newPhoto,
+            name: action.payload.newName,
+            year: action.payload.newYear,
+            author: action.payload.newAuthor,
+            category: action.payload.newCategory
           }
         ],
         newCinemaText: ''
       };
     case SELECT_CATEGORY:
-      return { ...state, viewCategory: action.newName };
+      return { ...state, viewCategory: action.payload.newName };
     case LIST_ORIENTATION:
       return { ...state, orientation: 'LIST' };
     case GRID_ORIENTATION:

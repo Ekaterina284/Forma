@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+
 import Navbar from './Components/Navbar/Navbar';
 import Registration from './Components/Registration/Registration';
 import { Route } from 'react-router-dom';

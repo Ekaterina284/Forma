@@ -5,7 +5,7 @@ import {
   orientationListActionCreator,
   orientationGridActionCreator
 } from './action';
-import style from '../Buttons/button.module.css';
+import button from '../Buttons/button.module.css';
 import list from '../../../image/menu.png';
 import add from '../../../image/99053.png';
 import grid from '../../../image/menu2.png';
@@ -21,18 +21,18 @@ function Button() {
 
   return (
     <div>
-      <div className={style.btn__menu}>
+      <div className={button.btn__menu}>
         <input
-          className={style.btn__input}
+          className={button.btn__input}
           type="image"
           src={list}
           alt={list}
           onClick={handleGridOrientationClick}
         />
       </div>
-      <div className={style.btn__menu}>
+      <div className={button.btn__menu}>
         <input
-          className={style.btn__input}
+          className={button.btn__input}
           type="image"
           src={grid}
           alt={grid}
@@ -45,7 +45,7 @@ function Button() {
           type="image"
           src={add}
           alt={add}
-          className={style.btn__add}
+          className={button.btn__add}
         ></input>
       </NavLink>
     </div>

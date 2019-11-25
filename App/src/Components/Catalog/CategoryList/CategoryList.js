@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import style from './CategoryList.module.css';
+import categoryListStyle from './CategoryList.module.css';
 import add from '../../../image/99053.png';
 import {
   addCategoryActionCreator,
@@ -17,7 +17,7 @@ function CategoryList() {
   const categ = categor.map(cinema => {
     return (
       <div key={cinema.id}>
-        <option onClick={onClickSelect} className={style.link}>
+        <option onClick={onClickSelect} className={categoryListStyle.link}>
           {cinema.category}
         </option>
       </div>
@@ -39,7 +39,7 @@ function CategoryList() {
   };
 
   return (
-    <div className={style.column}>
+    <div className={categoryListStyle.column}>
       <br></br>
       <textarea
         onChange={onNameChange}
@@ -51,7 +51,7 @@ function CategoryList() {
         type="image"
         src={add}
         alt="Button"
-        className={style.column__btn__add}
+        className={categoryListStyle.column__btn__add}
         onClick={onAddCategoryClick}
       ></input>
       {categ}

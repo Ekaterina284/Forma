@@ -24,7 +24,7 @@ const categoryReducer = (state = initialState, action) => {
         ...state,
         categoryData: [
           ...state.categoryData,
-          { id: state.categoryData.lenght, category: action.newName }
+          { id: state.categoryData.lenght, category: action.payload.newName }
         ],
         newPostText: ''
       };

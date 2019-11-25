@@ -6,9 +6,11 @@ export const addFilmActionCreator = ({
   category
 }) => ({
   type: 'ADD_CINEMA',
-  newPhoto: photo,
-  newName: name,
-  newYear: year,
-  newAuthor: author,
-  newCategory: category
+  payload: {
+    newPhoto: photo,
+    newName: name,
+    newYear: year,
+    newAuthor: author,
+    newCategory: category
+  }
 });
