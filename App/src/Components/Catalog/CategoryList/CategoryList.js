@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import * as axios from 'axios';
 import categoryListStyle from './CategoryList.module.css';
 import add from '../../../image/99053.png';
 import {
   addCategoryActionCreator,
   selectCategoryActionCreator
 } from '../../../store/Category/action';
+
+axios.get('http://localhost:3001/asd').then(response => console.log(response));
 
 function CategoryList() {
   const dispatch = useDispatch();

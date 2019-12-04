@@ -84,6 +84,7 @@ const CinemaReducer = (state = initialState, action) => {
         ],
         newCinemaText: ''
       };
+
     case SELECT_CATEGORY:
       return { ...state, viewCategory: action.payload.newName };
     case LIST_ORIENTATION:
