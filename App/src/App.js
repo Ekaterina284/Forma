@@ -10,7 +10,7 @@ import Login from './Components/Login/Login';
 const App = props => {
   return (
     <div>
-      <Navbar />
+      <Route exact path="/login" render={() => <Navbar />} />
       <Route exact path="/register" render={() => <Registration />} />
       <Route exact path="/catalog" render={() => <Catalog />} />
       <Route exact path="/add" render={() => <AddFilm />} />

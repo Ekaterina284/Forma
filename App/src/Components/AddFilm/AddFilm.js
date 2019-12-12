@@ -77,11 +77,11 @@ const AddFilm = () => {
           </label>
           <input
             className={style.form__input}
-            required
             type="file"
             name="photo"
             placeholder={t('cinemaname')}
             onChange={onFilmChange}
+            multiple
           />
         </div>
 

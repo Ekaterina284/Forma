@@ -5,7 +5,7 @@ const GRID_ORIENTATION = 'GRID_ORIENTATION';
 const initialState = {
   newCinemaText: '',
   viewCategory: '',
-  orientation: 'LIST',
+  orientation_list: 'LIST',
   orientation: 'GRID',
   movieData: [
     {

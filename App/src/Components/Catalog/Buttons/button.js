@@ -5,7 +5,7 @@ import {
   orientationListActionCreator,
   orientationGridActionCreator
 } from './action';
-import button from '../Buttons/button.module.css';
+import button from './button.module.css';
 import list from '../../../image/menu.png';
 import add from '../../../image/99053.png';
 import grid from '../../../image/menu2.png';

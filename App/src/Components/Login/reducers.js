@@ -12,6 +12,7 @@ export const loginReducer = (state = defaultState, action) => {
         name: action.payload.newName,
         password: action.payload.newPassword
       };
+    default:
   }
   return state;
 };

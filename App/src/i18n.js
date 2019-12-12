@@ -17,7 +17,8 @@ const resources = {
       create: 'Create',
       author: 'Author',
       year: 'Year',
-      Add: 'Аdd movie'
+      Add: 'Аdd movie',
+      exit: 'Exit'
     }
   }
 };

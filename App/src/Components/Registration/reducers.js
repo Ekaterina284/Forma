@@ -1,7 +1,4 @@
-import {
-  REGISTER_CHANGE_NAME_TEXT,
-  REGISTER_CHANGE_PASSWORD_TEXT
-} from './action';
+import { REGISTER } from './action';
 
 const defaultState = {
   name: '',
@@ -9,16 +6,14 @@ const defaultState = {
 };
 export const registerReducer = (state = defaultState, action) => {
   switch (action.type) {
-    case REGISTER_CHANGE_NAME_TEXT:
+    case REGISTER:
       return {
         ...state,
-        name: action.payload
+        name: action.payload.newName,
+        password: action.payload.newPassword
       };
-    case REGISTER_CHANGE_PASSWORD_TEXT:
-      return {
-        ...state,
-        password: action.payload
-      };
+    default:
   }
+
   return state;
 };
