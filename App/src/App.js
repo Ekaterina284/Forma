@@ -1,24 +1,22 @@
 import React from 'react';
-import './App.css';
+
 import Navbar from './Components/Navbar/Navbar';
-import Login from './Components/LoginForm/Login';
-import Registration from './Components/RegisterForm/register';
-import { BrowserRouter, Route } from 'react-router-dom';
-import Category from './Components/Catalog/Category/Category';
+import Registration from './Components/Registration/Registration';
+import { Route } from 'react-router-dom';
+import AddFilm from './Components/AddFilm/AddFilm';
+import Catalog from './Components/Catalog/Catalog/Catalog';
+import Login from './Components/Login/Login';
 
-const App = () => {
+const App = props => {
   return (
-    <BrowserRouter>
-      <div className="app__wrapper">
-        <Navbar />
-
-        <div className="app__wpapper__content">
-          <Route path="/login" component={Login} />
-          <Route path="/register" component={Registration} />
-          <Route path="/catalog" component={Category} />
-        </div>
-      </div>
-    </BrowserRouter>
+    <div>
+      <Navbar />
+      <Route exact path="/register" render={() => <Registration />} />
+      <Route exact path="/catalog" render={() => <Catalog />} />
+      <Route exact path="/add" render={() => <AddFilm />} />
+      <Route exact path="/" render={() => <Login />} />
+      <Route exact path="/login" render={() => <Login />} />
+    </div>
   );
 };
 

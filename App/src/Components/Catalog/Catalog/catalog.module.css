@@ -1,0 +1,17 @@
+.column__1 {
+  width: 20%;
+  background-color: rgb(134, 23, 47);
+  float: left;
+  height: 700px;
+}
+
+.column__2 {
+  width: 73%;
+  float: left;
+}
+
+.column__3 {
+  width: 7%;
+  min-height: 2%;
+  float: left;
+}

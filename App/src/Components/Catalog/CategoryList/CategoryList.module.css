@@ -1,0 +1,17 @@
+.column__btn__add {
+  height: 60px;
+  margin-left: 210px;
+  margin-top: -110px;
+}
+.link {
+  color: #0f0f0f;
+  margin-left: 45px;
+  margin-bottom: 30px;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #a4e4ec;
+}

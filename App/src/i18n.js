@@ -4,14 +4,20 @@ import { initReactI18next } from 'react-i18next';
 const resources = {
   en: {
     translation: {
-      log: 'LOGIN',
-      register: 'REGISTER',
+      log: 'Login',
+      register: 'Registration',
       logout: 'LOGOUT',
-      nameprogram: 'CATALOG MOVIES',
+      nameprogram: 'Catalog movies',
       username: 'Name',
       pass: 'Password',
       cinema: 'Cinema',
-      category: 'Category'
+      category: 'Category',
+      sign: 'Sign in',
+      cinemaname: 'Cinema name',
+      create: 'Create',
+      author: 'Author',
+      year: 'Year',
+      Add: 'Аdd movie'
     }
   }
 };

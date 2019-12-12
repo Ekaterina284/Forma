@@ -1,0 +1,27 @@
+.title {
+  font-size: 35px;
+  margin-top: 190px;
+  text-align: center;
+  color: rgb(165, 8, 68);
+}
+.form__register__btn {
+  background: #811c32;
+  margin-top: 20px;
+  font-size: 20px;
+  border-radius: 7px;
+  border-bottom-color: rgb(58, 4, 6);
+  color: beige;
+  width: 150px;
+  height: 30px;
+}
+.form__register {
+  margin-top: 50px;
+  text-align: center;
+}
+.form__register__input {
+  margin-bottom: 20px;
+  height: 25px;
+  border-radius: 6px;
+  width: 250px;
+  text-align: center;
+}

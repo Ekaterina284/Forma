@@ -1,0 +1,37 @@
+.form__btn {
+  background: #811c32;
+  margin-top: 20px;
+  font-size: 20px;
+  border-radius: 7px;
+  border-bottom-color: rgb(58, 4, 6);
+  color: beige;
+  width: 170px;
+  height: 30px;
+}
+.form__film {
+  margin-top: 130px;
+  text-align: center;
+}
+.form__input {
+  margin-bottom: 20px;
+
+  height: 25px;
+  border-radius: 6px;
+  width: 250px;
+  text-align: center;
+}
+.form__label__1 {
+  padding-right: 50px;
+}
+.form__label__2 {
+  padding-right: 110px;
+}
+.form__label__3 {
+  padding-right: 100px;
+}
+.form__select {
+  padding-right: 85px;
+}
+.category {
+  width: 150px;
+}
